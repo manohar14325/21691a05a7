@@ -1,0 +1,29 @@
+
+RESPONSE
+
+[
+
+
+    {
+        "id": "123e4567-e89b-12d3-a456-426614174000",
+        "productName": "Laptop 4",
+        "price": 1258,
+        "rating": 3.8,
+        "discount": 33,
+        "availability": "yes",
+        "company": "AMZ"
+    },
+    // More products here...
+]
+
+RESPONSE
+
+{
+    "id": "123e4567-e89b-12d3-a456-426614174000",
+    "productName": "Laptop 4",
+    "price": 1258,
+    "rating": 3.8,
+    "discount": 33,
+    "availability": "yes",
+    "company": "AMZ"
+}

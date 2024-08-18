@@ -1,0 +1,143 @@
+TOP PRODUCTS IN A ACATEGORY
+
+curl "http://localhost:3000/categories/Laptop/products?n=5&minPrice=1000&maxPrice=5000&sortBy=price&order=asc"
+
+[
+    {
+        "id": "f9f8b7da-bb84-4f1c-96a5-c91b31436a2b",
+        "productName": "Laptop 4",
+        "price": 1258,
+        "rating": 3.8,
+        "discount": 33,
+        "availability": "yes",
+        "company": "AMZ"
+    },
+    {
+        "id": "3c675748-52c5-4e0d-80f6-379b68523e0a",
+        "productName": "Laptop 6",
+        "price": 2450,
+        "rating": 4.1,
+        "discount": 25,
+        "availability": "yes",
+        "company": "FLP"
+    },
+    {
+        "id": "fc5bcebb-d8b7-4f71-9b30-3abfcfe462e5",
+        "productName": "Laptop 9",
+        "price": 3299,
+        "rating": 4.5,
+        "discount": 40,
+        "availability": "out-of-stock",
+        "company": "SNP"
+    },
+    {
+        "id": "8d4f9ab2-4c7b-4c4c-8bb8-58c8e9dc42f6",
+        "productName": "Laptop 11",
+        "price": 3699,
+        "rating": 4.2,
+        "discount": 15,
+        "availability": "yes",
+        "company": "MYN"
+    },
+    {
+        "id": "c174ac29-c1b2-4c9e-bd9c-b2b2a304b9d4",
+        "productName": "Laptop 14",
+        "price": 4590,
+        "rating": 4.7,
+        "discount": 30,
+        "availability": "yes",
+        "company": "AZO"
+    }
+]
+
+SPECIFIC PRODUCT BY ID
+
+
+curl "http://localhost:3000/categories/Laptop/products/f9f8b7da-bb84-4f1c-96a5-c91b31436a2b"
+
+{
+    "id": "f9f8b7da-bb84-4f1c-96a5-c91b31436a2b",
+    "productName": "Laptop 4",
+    "price": 1258,
+    "rating": 3.8,
+    "discount": 33,
+    "availability": "yes",
+    "company": "AMZ"
+}
+
+PAGINATED RESULTS WHENN>10
+
+curl "http://localhost:3000/categories/Laptop/products?n=10&page=2&minPrice=1000&maxPrice=5000&sortBy=price&order=asc"
+
+[
+    {
+        "id": "2c87b4da-9f42-4b9e-bf97-3a7a191a1fa3",
+        "productName": "Laptop 15",
+        "price": 4850,
+        "rating": 4.6,
+        "discount": 35,
+        "availability": "yes",
+        "company": "FLP"
+    },
+    {
+        "id": "845a737f-7e9c-4a53-9138-1835e4038e45",
+        "productName": "Laptop 18",
+        "price": 4900,
+        "rating": 4.8,
+        "discount": 20,
+        "availability": "yes",
+        "company": "SNP"
+    }
+]
+
+SORTING BY RATING
+
+curl "http://localhost:3000/categories/Laptop/products?n=5&minPrice=1000&maxPrice=5000&sortBy=rating&order=desc"
+
+[
+    {
+        "id": "c174ac29-c1b2-4c9e-bd9c-b2b2a304b9d4",
+        "productName": "Laptop 14",
+        "price": 4590,
+        "rating": 4.7,
+        "discount": 30,
+        "availability": "yes",
+        "company": "AZO"
+    },
+    {
+        "id": "fc5bcebb-d8b7-4f71-9b30-3abfcfe462e5",
+        "productName": "Laptop 9",
+        "price": 3299,
+        "rating": 4.5,
+        "discount": 40,
+        "availability": "out-of-stock",
+        "company": "SNP"
+    },
+    {
+        "id": "8d4f9ab2-4c7b-4c4c-8bb8-58c8e9dc42f6",
+        "productName": "Laptop 11",
+        "price": 3699,
+        "rating": 4.2,
+        "discount": 15,
+        "availability": "yes",
+        "company": "MYN"
+    },
+    {
+        "id": "3c675748-52c5-4e0d-80f6-379b68523e0a",
+        "productName": "Laptop 6",
+        "price": 2450,
+        "rating": 4.1,
+        "discount": 25,
+        "availability": "yes",
+        "company": "FLP"
+    },
+    {
+        "id": "f9f8b7da-bb84-4f1c-96a5-c91b31436a2b",
+        "productName": "Laptop 4",
+        "price": 1258,
+        "rating": 3.8,
+        "discount": 33,
+        "availability": "yes",
+        "company": "AMZ"
+    }
+]
